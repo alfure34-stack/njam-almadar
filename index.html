@@ -428,6 +428,21 @@ body.nm-intro-lock{overflow:hidden}
 @media(max-width:980px){.ctr-gallery{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:680px){.ctr-gallery{grid-template-columns:repeat(2,1fr)}}
 </style>
+
+<style id="team-v2-css">
+.cert-meta{display:flex;gap:14px;flex-wrap:wrap;margin-top:6px}
+.cert-meta span{font-family:var(--display);font-size:.72rem;letter-spacing:1px;color:var(--blue-glow);background:rgba(62,160,255,.1);border:1px solid var(--line);border-radius:3px;padding:2px 8px}
+.cert-foot{color:var(--muted);font-size:.78rem;line-height:1.6;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.clients{margin-top:64px;padding-top:48px;border-top:1px solid var(--line)}
+.clients-head{margin-bottom:26px}.clients-head h3{font-size:1.5rem}
+.clients-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.client{background:linear-gradient(160deg,var(--panel),var(--panel-2));border:1px solid var(--line);border-radius:6px;padding:22px 22px 20px;position:relative}
+.client::after{content:"";position:absolute;right:0;top:0;width:60px;height:60px;background:radial-gradient(circle at 100% 0,rgba(244,81,30,.18),transparent 70%)}
+.client b{display:block;font-family:var(--display);font-size:1.15rem;margin-bottom:2px}
+.client span{display:block;color:var(--blue-glow);font-size:.82rem;margin-bottom:8px}
+.client em{font-style:normal;color:var(--muted);font-size:.86rem;line-height:1.55}
+@media(max-width:980px){.clients-row{grid-template-columns:1fr}}
+</style>
 </head>
 <body class="nm-intro-lock">
 <div id="nm-intro" aria-label="Intro">
@@ -717,18 +732,25 @@ body.nm-intro-lock{overflow:hidden}
 
 <section id="team">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-tag">Team &amp; Certifications</span><h2>Certified Expertise Driving Excellence</h2><p>A team of certified experts, backed by professional certifications and accreditations that guarantee the highest performance.</p></div>
+    <div class="sec-head reveal"><span class="sec-tag">Team &amp; Certifications</span><h2>Certified Systems, Field-Proven People</h2><p>A team of chemical engineers and laboratory specialists working under certified quality, environmental and safety management systems.</p></div>
     <div class="team-layout">
       <div class="team-cards reveal">
-        <div class="team-card"><div class="team-avatar">NM</div><div><h4>Technical Leadership</h4><div class="role">Chemical Engineers &amp; Lab Supervisors</div><div class="desc">Extensive field experience in oil &amp; water analysis and laboratory management.</div></div></div>
-        <div class="team-card"><div class="team-avatar">QA</div><div><h4>Quality Assurance</h4><div class="role">Quality &amp; Safety Specialists</div><div class="desc">Ensuring compliance with international standards across every stage of work.</div></div></div>
-        <div class="team-card"><div class="team-avatar">R&amp;D</div><div><h4>Analysis &amp; Development</h4><div class="role">Field Laboratory Team</div><div class="desc">Measurement precision and continuous improvement of analysis methods.</div></div></div>
+        <div class="team-card"><div class="team-avatar">NM</div><div><h4>Technical Leadership</h4><div class="role">Chemical Engineers &amp; Laboratory Managers</div><div class="desc">More than a decade of oilfield laboratory, production-chemistry and corrosion-study experience across southern Iraq's major fields.</div></div></div>
+        <div class="team-card"><div class="team-avatar">QA</div><div><h4>Quality, Health, Safety &amp; Environment</h4><div class="role">QHSE Specialists</div><div class="desc">Integrated management system certified to ISO 9001, ISO 14001 and ISO 45001 — audited annually by a third-party certification body.</div></div></div>
+        <div class="team-card"><div class="team-avatar">OPS</div><div><h4>Supply &amp; Field Operations</h4><div class="role">Logistics, Dosing &amp; Site Teams</div><div class="desc">Chemical delivery, on-site dosing support and plant operation &amp; maintenance — from drum to injection point.</div></div></div>
       </div>
       <div class="cert-list reveal">
-        <div class="cert-item"><div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div><div><h4>ISO 9001 Quality Management</h4><span>Commitment to international quality standards</span></div></div>
-        <div class="cert-item"><div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h4>HSE Occupational Safety</h4><span>Accredited health, safety &amp; environment procedures</span></div></div>
-        <div class="cert-item"><div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><div><h4>API Oil Analysis Standards</h4><span>Applying globally recognized specifications</span></div></div>
-        <div class="cert-item"><div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><div><h4>ISO 17025 Lab Accreditation</h4><span>Technical competence in testing &amp; calibration</span></div></div>
+        <div class="cert-item"><div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div><div><h4>ISO 9001:2015</h4><span>Quality Management System</span><div class="cert-meta"><span>Cert. No. INT/EGQ/2607NM/5835</span><span>Valid to 30 Jul 2027</span></div></div></div><div class="cert-item"><div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div><div><h4>ISO 14001:2015</h4><span>Environmental Management System</span><div class="cert-meta"><span>Cert. No. INT/EGE/2607NM/5836</span><span>Valid to 30 Jul 2027</span></div></div></div><div class="cert-item"><div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div><div><h4>ISO 45001:2018</h4><span>Occupational Health &amp; Safety Management</span><div class="cert-meta"><span>Cert. No. INT/EGO/2607NM/5837</span><span>Valid to 30 Jul 2027</span></div></div></div>
+        <p class="cert-foot">Certificates issued by Hawk Eye Certifications Pvt. Ltd. (July 2026). Certified scope: general contracting, transportation, supply and general trading for oil services. Certification applies to the company's management systems, not to individual products.</p>
+      </div>
+    </div>
+
+    <div class="clients reveal">
+      <div class="clients-head"><span class="sec-tag">Clients &amp; Partners</span><h3>Trusted on Iraq's operating fields</h3></div>
+      <div class="clients-row">
+        <div class="client"><b>CNPED</b><span>Chengdu North Petroleum E&amp;D — Iraq Branch</span><em>Treatment-chemical supply, Contract 028-PC-23-EBS</em></div>
+        <div class="client"><b>Midland Oil Co. / EBS</b><span>East Baghdad Field — Southern Region</span><em>End user, water-treatment chemicals at CPF</em></div>
+        <div class="client"><b>Ecolog International</b><span>Majnoon Oilfield</span><em>Operation &amp; maintenance of Ovivo packaged MBBR sewage treatment plant, coagulant &amp; flocculant supply</em></div>
       </div>
     </div>
   </div>
