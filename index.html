@@ -443,6 +443,19 @@ body.nm-intro-lock{overflow:hidden}
 .client em{font-style:normal;color:var(--muted);font-size:.86rem;line-height:1.55}
 @media(max-width:980px){.clients-row{grid-template-columns:1fr}}
 </style>
+
+<style id="contact-v2-css">
+.contact-info a{color:inherit;border-bottom:1px dotted var(--line);transition:.3s}.contact-info a:hover{color:var(--blue-glow);border-color:var(--blue-glow)}
+.form-actions{display:flex;gap:10px;flex-wrap:wrap}.form-actions .btn{flex:1;justify-content:center;min-width:160px}
+.btn-wa{background:#1f9d55;color:#fff;gap:8px}.btn-wa:hover{background:#25b764;transform:translateY(-2px)}.btn-wa svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2}
+.btn:disabled{opacity:.7;cursor:default}
+#waFloat{position:fixed;right:22px;bottom:22px;z-index:900;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.45),0 0 0 0 rgba(37,211,102,.5);animation:waPulse 2.6s ease-out infinite;transition:.3s}
+#waFloat:hover{transform:scale(1.08)}#waFloat svg{width:30px;height:30px;fill:#fff}
+#waFloat span{position:absolute;right:68px;top:50%;transform:translateY(-50%);background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:6px 12px;font-size:.8rem;white-space:nowrap;opacity:0;pointer-events:none;transition:.3s}
+#waFloat:hover span{opacity:1}
+@keyframes waPulse{0%{box-shadow:0 10px 30px rgba(0,0,0,.45),0 0 0 0 rgba(37,211,102,.55)}100%{box-shadow:0 10px 30px rgba(0,0,0,.45),0 0 0 18px rgba(37,211,102,0)}}
+@media(max-width:680px){#waFloat{right:16px;bottom:16px;width:54px;height:54px}}
+</style>
 </head>
 <body class="nm-intro-lock">
 <div id="nm-intro" aria-label="Intro">
@@ -762,17 +775,22 @@ body.nm-intro-lock{overflow:hidden}
     <div class="contact-grid">
       <div class="contact-info reveal">
         <div class="ci-item"><div class="ci-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h4>Address</h4><p>Basra, Republic of Iraq</p></div></div>
-        <div class="ci-item"><div class="ci-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><h4>Phone</h4><p>+964 780 555 5133</p></div></div>
-        <div class="ci-item"><div class="ci-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></div><div><h4>Email</h4><p>info@najmal-madar.com</p></div></div>
+        <div class="ci-item"><div class="ci-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><h4>Phone / WhatsApp</h4><p><a href="tel:+9647805555133">+964 780 555 5133</a> · <a href="https://wa.me/9647805555133" target="_blank" rel="noopener">Chat on WhatsApp</a></p></div></div>
+        <div class="ci-item"><div class="ci-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></div><div><h4>Email</h4><p><a href="mailto:info@najmal-madar.com">info@najmal-madar.com</a></p></div></div>
         <div class="ci-item"><div class="ci-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><h4>Working Hours</h4><p>Sunday – Thursday: 8:00 AM – 4:00 PM</p></div></div>
       </div>
       <div class="form-card reveal">
         <div class="field"><label>Full Name</label><input type="text" id="f-name" placeholder="Your name"></div>
         <div class="field"><label>Email</label><input type="email" id="f-email" placeholder="example@mail.com"></div>
+        <div class="field"><label>Company</label><input type="text" id="f-org" placeholder="Company / organisation (optional)"></div>
         <div class="field"><label>Subject</label><input type="text" id="f-subject" placeholder="Message subject"></div>
         <div class="field"><label>Your Message</label><textarea id="f-msg" placeholder="Write the details of your inquiry here..."></textarea></div>
-        <button class="btn btn-primary" style="width:100%;justify-content:center" id="sendBtn">Send Message</button>
-        <p class="form-note">We'll respond to your inquiry as soon as possible.</p>
+        <input type="text" id="f-company" placeholder="Company (optional)" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="form-actions">
+          <button class="btn btn-primary" id="sendBtn" type="button">Send Message</button>
+          <a class="btn btn-wa" href="https://wa.me/9647805555133?text=Hello%20Najm%20Al-Madar%2C%20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.3-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>WhatsApp</a>
+        </div>
+        <p class="form-note" id="formNote">We respond within one working day. Your details are used only to answer your enquiry.</p>
       </div>
     </div>
   </div>
@@ -809,14 +827,28 @@ burger.addEventListener('click',()=>navLinks.classList.toggle('open'));
 navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4*0.08)+'s';io.observe(el)});
-document.getElementById('sendBtn').addEventListener('click',()=>{
-  const n=document.getElementById('f-name').value,e=document.getElementById('f-email').value,
-        s=document.getElementById('f-subject').value,m=document.getElementById('f-msg').value;
-  const body=encodeURIComponent('Name: '+n+'\nEmail: '+e+'\n\n'+m);
-  window.location.href='mailto:info@najmal-madar.com?subject='+encodeURIComponent(s||'Website Inquiry')+'&body='+body;
+document.getElementById('sendBtn').addEventListener('click',async()=>{
+  const g=id=>document.getElementById(id).value.trim();
+  const n=g('f-name'),e=g('f-email'),o=g('f-org'),sub=g('f-subject'),m=g('f-msg'),note=document.getElementById('formNote'),btn=document.getElementById('sendBtn');
+  if(document.getElementById('f-company').value) return; /* honeypot */
+  if(!n||!e||!m){note.textContent='Please fill in your name, email and message.';note.style.color='var(--flame-bright)';return;}
+  btn.disabled=true;btn.textContent='Sending…';note.style.color='';note.textContent='';
+  const payload={name:n,email:e,company:o,subject:sub||'Website enquiry',message:m,_subject:'[najm-almadar.com] '+(sub||'Website enquiry'),_template:'table',_captcha:'false'};
+  try{
+    const r=await fetch('https://formsubmit.co/ajax/info@najmal-madar.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
+    const j=await r.json().catch(()=>({}));
+    if(r.ok&&(j.success==='true'||j.success===true)){btn.textContent='Message Sent ✓';note.textContent='Thank you — we have received your enquiry and will reply within one working day.';note.style.color='#37d366';['f-name','f-email','f-org','f-subject','f-msg'].forEach(id=>document.getElementById(id).value='');return;}
+    throw new Error('send failed');
+  }catch(err){
+    const body=encodeURIComponent('Name: '+n+'\nEmail: '+e+(o?'\nCompany: '+o:'')+'\n\n'+m);
+    window.location.href='mailto:info@najmal-madar.com?subject='+encodeURIComponent(sub||'Website enquiry')+'&body='+body;
+    btn.disabled=false;btn.textContent='Send Message';note.textContent='Opening your email app to send the message…';
+  }
 });
 </script>
 
+
+<a id="waFloat" href="https://wa.me/9647805555133?text=Hello%20Najm%20Al-Madar%2C%20" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><span>Chat with us on WhatsApp</span><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2m0 1.67c4.54 0 8.24 3.7 8.24 8.24s-3.7 8.24-8.24 8.24c-1.5 0-2.97-.41-4.25-1.18l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.35c0-4.54 3.7-8.24 8.24-8.24M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01"/></svg></a>
 <div id="docLightbox" onclick="closeDoc(event)">
   <button id="docClose" onclick="closeDoc(event,true)" aria-label="Close">&times;</button>
   <img id="docLightboxImg" src="" alt="Signed product identification label">
