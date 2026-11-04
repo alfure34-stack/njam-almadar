@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://alfure34-stack.github.io/njam-almadar/sitemap.xml
