@@ -864,7 +864,7 @@ document.getElementById('sendBtn').addEventListener('click',async()=>{
   btn.disabled=true;btn.textContent='Sending…';note.style.color='';note.textContent='';
   const payload={name:n,email:e,company:o,subject:sub||'Website enquiry',message:m,_subject:'[najm-almadar.com] '+(sub||'Website enquiry'),_template:'table',_captcha:'false'};
   try{
-    const r=await fetch('https://formsubmit.co/ajax/al.fure34@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
+    const r=await fetch('https://formsubmit.co/ajax/info@najmal-madar.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
     const j=await r.json().catch(()=>({}));
     if(r.ok&&(j.success==='true'||j.success===true)){btn.textContent='Message Sent ✓';note.textContent='Thank you — we have received your enquiry and will reply within one working day.';note.style.color='#37d366';['f-name','f-email','f-org','f-subject','f-msg'].forEach(id=>document.getElementById(id).value='');return;}
     throw new Error('send failed');
