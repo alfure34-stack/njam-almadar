@@ -364,6 +364,47 @@ body.nm-intro-lock{overflow:hidden}
 @media(max-width:980px){.prod-grid{grid-template-columns:repeat(2,1fr)}.prod-stats{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.prod-grid{grid-template-columns:1fr}}
 </style>
+
+<style id="lab-css">
+#laboratory{background:linear-gradient(180deg,var(--bg),var(--bg-2));overflow:hidden}
+#laboratory .grid-bg{mask-image:radial-gradient(circle at 20% 30%,#000,transparent 60%);opacity:.3}
+.lab-intro{display:grid;gap:28px;margin-bottom:10px}
+.lab-points{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.lab-point{display:flex;flex-direction:column;gap:10px;align-items:flex-start;background:linear-gradient(160deg,var(--panel),var(--panel-2));border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.lab-point i{flex:none;width:38px;height:38px;border-radius:8px;background:rgba(62,160,255,.12);display:grid;place-items:center}
+.lab-point i svg{width:20px;height:20px;fill:none;stroke:var(--blue-glow);stroke-width:1.8}
+.lab-point b{display:block;font-family:var(--display);font-size:1rem;margin-bottom:2px}
+.lab-point span{color:var(--muted);font-size:.88rem;line-height:1.55}
+.lab-tabs{display:grid;grid-template-columns:280px 1fr;gap:18px;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--panel-2)}
+.lab-nav{background:var(--panel);border-right:1px solid var(--line);display:flex;flex-direction:column}
+.lab-nav button{text-align:left;background:none;border:0;border-bottom:1px solid var(--line);color:var(--muted);padding:18px 20px;font-family:var(--body);font-size:.92rem;cursor:pointer;transition:.3s;display:flex;align-items:center;gap:12px;position:relative}
+.lab-nav button em{font-style:normal;font-family:var(--display);font-size:.8rem;color:var(--blue-glow);opacity:.8;min-width:22px}
+.lab-nav button:hover{color:var(--text);background:rgba(62,160,255,.05)}
+.lab-nav button.active{color:var(--text);background:rgba(244,81,30,.08)}
+.lab-nav button.active::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--flame-bright)}
+.lab-panel{padding:26px 28px 24px;display:none}
+.lab-panel.active{display:block}
+.lab-panel h3{font-size:1.35rem;margin-bottom:8px}
+.lab-panel>p{color:var(--muted);font-size:.95rem;margin-bottom:18px;max-width:70ch}
+.lab-table{width:100%;border-collapse:collapse;font-size:.88rem}
+.lab-table th{text-align:left;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--flame-bright);padding:10px 12px;border-bottom:1px solid var(--line-warm);font-weight:600}
+.lab-table td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.lab-table td:first-child{color:var(--text);font-weight:500}
+.lab-table td:nth-child(2){color:var(--blue-glow);font-family:var(--display);font-size:.84rem;white-space:nowrap}
+.lab-table td:nth-child(3){color:var(--muted)}
+.lab-table tr:last-child td{border-bottom:0}
+.lab-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.lab-step{position:relative;padding:22px 20px 20px;border:1px solid var(--line);border-radius:6px;background:linear-gradient(160deg,var(--panel),var(--panel-2))}
+.lab-step em{font-style:normal;font-family:var(--display);font-size:2rem;color:var(--blue-glow);opacity:.35;line-height:1;display:block;margin-bottom:10px}
+.lab-step b{display:block;font-family:var(--display);font-size:1.02rem;margin-bottom:6px}
+.lab-step span{color:var(--muted);font-size:.86rem;line-height:1.55}
+.lab-cta{margin-top:40px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:26px 28px;border:1px solid var(--line);border-radius:8px;background:radial-gradient(600px 200px at 10% 50%,rgba(33,150,243,.14),transparent 70%),var(--panel)}
+.lab-cta p{color:var(--muted);max-width:60ch;font-size:.95rem}
+.lab-cta b{color:var(--text);display:block;font-family:var(--display);font-size:1.2rem;margin-bottom:4px}
+.lab-cta .acts{display:flex;gap:10px;flex-wrap:wrap}
+@media(max-width:980px){.lab-points{grid-template-columns:repeat(2,1fr)}.lab-tabs{grid-template-columns:1fr}.lab-nav{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line)}.lab-nav button{white-space:nowrap;border-bottom:0;border-right:1px solid var(--line);padding:14px 16px}.lab-nav button.active::before{left:0;right:0;top:auto;bottom:0;height:3px;width:auto}.lab-steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.lab-steps,.lab-points{grid-template-columns:1fr}.lab-table td:nth-child(3){display:none}.lab-table th:nth-child(3){display:none}.lab-table td:nth-child(2){white-space:normal}}
+</style>
 </head>
 <body class="nm-intro-lock">
 <div id="nm-intro" aria-label="Intro">
@@ -471,6 +512,7 @@ body.nm-intro-lock{overflow:hidden}
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#products">Products</a>
+    <a href="#laboratory">Laboratory</a>
     <a href="#projects">Projects</a>
     <a href="#contracts">Contracts</a>
     <a href="#team">Team</a>
@@ -557,6 +599,41 @@ body.nm-intro-lock{overflow:hidden}
     <div class="prod-note reveal">
       <div><strong>Need something not listed?</strong> The full itemised catalogue is available on request, and we source against the client's own specification — not a fixed list.</div>
       <a class="btn btn-primary" href="https://wa.me/9647805555133?text=Hello%20Najm%20Al-Madar%2C%20please%20send%20the%20full%20product%20catalogue." target="_blank" rel="noopener">Request Full Catalogue</a>
+    </div>
+  </div>
+</section>
+
+
+<section id="laboratory">
+  <div class="grid-bg"></div>
+  <div class="wrap" style="position:relative">
+    <div class="sec-head reveal"><span class="sec-tag">Laboratory Services</span><h2>We Test What We Sell — On Your Own Fluids</h2><p>An in-house petroleum and water laboratory run by chemical engineers with more than a decade of oilfield laboratory experience. Analysis is performed to ASTM, APHA, API and NACE methods — the references your QA and inspection teams already work to.</p></div>
+
+    <div class="lab-intro">
+      <div class="lab-points reveal">
+        <div class="lab-point"><i><svg viewBox="0 0 24 24"><path d="M9 3v6l-5 9a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-9V3"/><path d="M7 3h10"/></svg></i><div><b>45+ routine and special tests</b><span>Crude, water, gas, amine, corrosion and drilling-fluid testing under one roof — no need to split samples between vendors.</span></div></div>
+        <div class="lab-point"><i><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="5"/></svg></i><div><b>Field sampling &amp; on-site testing</b><span>Sampling at wellhead, separator, CPF and water plant with preserved, chain-of-custody samples; portable kits for time-critical parameters (DO, H₂S, residuals).</span></div></div>
+        <div class="lab-point"><i><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></i><div><b>Reports that drive decisions</b><span>Every report states the method, detection limit and trend against previous results, with a recommendation — not just a number.</span></div></div>
+        <div class="lab-point"><i><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></i><div><b>Built for southern-Iraq conditions</b><span>High-salinity produced water above 200,000 mg/L TDS, H₂S-bearing streams and summer ambient temperatures are our normal operating envelope.</span></div></div>
+      </div>
+      <div class="reveal">
+        <div class="lab-tabs">
+          <div class="lab-nav" id="labNav"><button type="button" data-k="crude"><em>01</em>Crude Oil & Products</button><button type="button" data-k="water"><em>02</em>Produced & Injection Water</button><button type="button" data-k="gas"><em>03</em>Gas, LPG & Amine</button><button type="button" data-k="corrosion"><em>04</em>Corrosion & Chemical Studies</button><button type="button" data-k="mud"><em>05</em>Drilling Fluid Testing</button></div>
+          <div id="labPanels"><div class="lab-panel" data-k="crude"><h3>Crude oil, condensate and product quality</h3><p>Sales-quality and process-control testing on crude, condensate and refined streams — the parameters that decide custody transfer, dehydration performance and export specification.</p><table class="lab-table"><thead><tr><th>Test</th><th>Method</th><th>What it answers</th></tr></thead><tbody><tr><td>BS&W (basic sediment & water)</td><td>ASTM D4007 / D96</td><td>Dehydration & custody transfer</td></tr><tr><td>Water content — Karl Fischer</td><td>ASTM D4377</td><td>Low-level water in crude</td></tr><tr><td>API gravity & density</td><td>ASTM D1298 / D4052</td><td>Crude grading</td></tr><tr><td>Salt content</td><td>ASTM D3230</td><td>Desalter performance</td></tr><tr><td>Total sulfur</td><td>ASTM D4294</td><td>Export specification</td></tr><tr><td>Kinematic viscosity</td><td>ASTM D445</td><td>Flow assurance</td></tr><tr><td>Pour point</td><td>ASTM D97</td><td>Wax handling</td></tr><tr><td>Flash point (PMCC)</td><td>ASTM D93</td><td>Storage safety</td></tr><tr><td>Reid vapour pressure</td><td>ASTM D323</td><td>Stabilisation</td></tr><tr><td>H₂S in crude / condensate</td><td>UOP 163 / ASTM D5705</td><td>Sour-service handling</td></tr></tbody></table></div><div class="lab-panel" data-k="water"><h3>Produced, injection, utility and potable water</h3><p>Full water characterisation for injection quality, discharge compliance, scaling tendency and treatment-chemical control.</p><table class="lab-table"><thead><tr><th>Test</th><th>Method</th><th>What it answers</th></tr></thead><tbody><tr><td>Oil in water (TOG)</td><td>ASTM D7066 / IR</td><td>Injection & discharge limits</td></tr><tr><td>Total suspended solids & turbidity</td><td>APHA 2540D / 2130B</td><td>Injectivity, filtration</td></tr><tr><td>pH, conductivity, TDS</td><td>APHA 4500-H⁺ / 2510</td><td>Baseline chemistry</td></tr><tr><td>Dissolved oxygen</td><td>ASTM D888 / colorimetric</td><td>Corrosion control</td></tr><tr><td>Sulfide / H₂S</td><td>APHA 4500-S²⁻</td><td>Souring, biocide programme</td></tr><tr><td>Iron (Fe²⁺ / Fe³⁺), manganese</td><td>APHA 3500-Fe</td><td>Corrosion monitoring</td></tr><tr><td>Chloride, sulfate, alkalinity, hardness</td><td>APHA 4500 / 2320 / 2340</td><td>Scaling indices</td></tr><tr><td>Ca, Mg, Ba, Sr, Na, K</td><td>Titration / ICP</td><td>Scale prediction</td></tr><tr><td>SRB & GHB bacteria</td><td>NACE TM0194 (bottle count)</td><td>Biocide selection</td></tr><tr><td>Residual inhibitor / biocide</td><td>Supplier method</td><td>Dosing verification</td></tr></tbody></table></div><div class="lab-panel" data-k="gas"><h3>Gas, LPG and gas-treating solvents</h3><p>Process-stream analysis for sweetening units, LPG quality and gas specification monitoring.</p><table class="lab-table"><thead><tr><th>Test</th><th>Method</th><th>What it answers</th></tr></thead><tbody><tr><td>H₂S and CO₂ in gas</td><td>Dräger / GC</td><td>Sweetening performance</td></tr><tr><td>Gas composition</td><td>ASTM D1945 (GC)</td><td>Heating value, dew point</td></tr><tr><td>LPG composition & vapour pressure</td><td>ASTM D2163 / D1267</td><td>Product specification</td></tr><tr><td>Copper strip corrosion</td><td>ASTM D1838</td><td>LPG sulfur compounds</td></tr><tr><td>Amine strength & acid-gas loading</td><td>Titration</td><td>Amine unit optimisation</td></tr><tr><td>Amine heat-stable salts & foaming</td><td>Titration / foam test</td><td>Unit troubleshooting</td></tr><tr><td>Glycol purity & water content</td><td>Karl Fischer / GC</td><td>Dehydration unit</td></tr></tbody></table></div><div class="lab-panel" data-k="corrosion"><h3>Corrosion monitoring and treatment-chemical evaluation</h3><p>The studies that turn a chemical programme into measured results: coupons, residuals, bottle tests and compatibility work on the client's own fluids.</p><table class="lab-table"><thead><tr><th>Test</th><th>Method</th><th>What it answers</th></tr></thead><tbody><tr><td>Weight-loss corrosion coupons</td><td>NACE SP0775 / ASTM G1</td><td>Corrosion rate (mpy)</td></tr><tr><td>LPR / ER probe monitoring</td><td>ASTM G96</td><td>Real-time corrosion trends</td></tr><tr><td>Corrosion inhibitor performance</td><td>Bubble test / wheel test</td><td>Product selection & dose</td></tr><tr><td>Demulsifier bottle testing</td><td>Field-temperature bottle test</td><td>Dehydration optimisation</td></tr><tr><td>Scale inhibitor efficiency</td><td>NACE TM0374 (static)</td><td>Minimum inhibitor concentration</td></tr><tr><td>Scale & deposit analysis</td><td>Acid digestion / XRD</td><td>Root-cause of fouling</td></tr><tr><td>Biocide kill test</td><td>Time-kill bottle test</td><td>Biocide selection</td></tr><tr><td>Coagulant / flocculant jar test</td><td>ASTM D2035</td><td>Water-plant optimisation</td></tr><tr><td>Chemical compatibility screening</td><td>In-house protocol</td><td>Programme integration</td></tr><tr><td>Chemical QC vs. COA</td><td>Density, pH, active content</td><td>Incoming batch verification</td></tr></tbody></table></div><div class="lab-panel" data-k="mud"><h3>Water-based and oil-based mud testing</h3><p>Standard API field tests for mud-programme control and additive QC.</p><table class="lab-table"><thead><tr><th>Test</th><th>Method</th><th>What it answers</th></tr></thead><tbody><tr><td>Mud weight / density</td><td>API RP 13B-1</td><td>Well control</td></tr><tr><td>Rheology (6-speed), gels</td><td>API RP 13B-1</td><td>Hole cleaning, suspension</td></tr><tr><td>API filtrate & HPHT filtrate</td><td>API RP 13B-1</td><td>Fluid-loss control</td></tr><tr><td>Methylene blue test (MBT)</td><td>API RP 13B-1</td><td>Reactive solids</td></tr><tr><td>Sand content & retort (solids / oil / water)</td><td>API RP 13B-1</td><td>Solids control</td></tr><tr><td>pH, alkalinity (Pm, Pf, Mf)</td><td>API RP 13B-1</td><td>Chemical treatment</td></tr><tr><td>Chlorides & hardness</td><td>API RP 13B-1</td><td>Contamination tracking</td></tr><tr><td>Electrical stability (OBM)</td><td>API RP 13B-2</td><td>Emulsion stability</td></tr></tbody></table></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lab-steps reveal">
+      <div class="lab-step"><em>01</em><b>Sample</b><span>Site visit, preserved sampling and chain of custody — or receive your samples at our Basra laboratory.</span></div>
+      <div class="lab-step"><em>02</em><b>Analyse</b><span>Testing to the referenced standard method with calibrated instruments and QC standards run alongside.</span></div>
+      <div class="lab-step"><em>03</em><b>Report</b><span>Clear certificate of analysis with methods, limits and trends; raw data available on request.</span></div>
+      <div class="lab-step"><em>04</em><b>Recommend</b><span>Chemical dose, product selection or corrective action — backed by the data, and followed up on the next sample.</span></div>
+    </div>
+
+    <div class="lab-cta reveal">
+      <div><b>Need an analysis programme or a one-off study?</b><p>Send us the stream, the parameters and the frequency — we return a scope, method list and schedule within one working day.</p></div>
+      <div class="acts"><a class="btn btn-primary" href="https://wa.me/9647805555133?text=Hello%20Najm%20Al-Madar%2C%20I%20would%20like%20to%20request%20laboratory%20analysis%20for%3A%20" target="_blank" rel="noopener">Request Analysis</a><a class="btn btn-ghost" href="#contact">Contact the Lab</a></div>
     </div>
   </div>
 </section>
@@ -788,7 +865,8 @@ body.nm-intro-lock{overflow:hidden}
         <p>Your trusted partner in engineering and laboratory solutions for the oil, gas, and water treatment sector.</p>
       </div>
       <div class="foot-col"><h4>Quick Links</h4><a href="#about">About</a><a href="#services">Services</a>
-        <a href="#products">Products</a><a href="#projects">Projects</a><a href="#contracts">Contracts</a><a href="#team">Team</a></div>
+        <a href="#products">Products</a>
+        <a href="#laboratory">Laboratory</a><a href="#projects">Projects</a><a href="#contracts">Contracts</a><a href="#team">Team</a></div>
       <div class="foot-col"><h4>Services</h4><a href="#services">Oil &amp; Water Analysis</a><a href="#services">Corrosion Control</a><a href="#services">Lab Supervision</a><a href="#services">Technical Consulting</a></div>
     </div>
     <div class="foot-bottom">
@@ -928,6 +1006,18 @@ document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeD
   q.addEventListener('input',function(){query=q.value.trim().toLowerCase();render();});
   more.addEventListener('click',function(){expanded=true;render();});
   renderPills();render();
+})();
+</script>
+
+<script id="lab-js">
+(function(){
+  var nav=document.getElementById('labNav'), panels=document.getElementById('labPanels'); if(!nav) return;
+  function activate(k){
+    nav.querySelectorAll('button').forEach(function(b){b.classList.toggle('active',b.dataset.k===k);});
+    panels.querySelectorAll('.lab-panel').forEach(function(p){p.classList.toggle('active',p.dataset.k===k);});
+  }
+  nav.addEventListener('click',function(e){var b=e.target.closest('button');if(b)activate(b.dataset.k);});
+  activate(nav.querySelector('button').dataset.k);
 })();
 </script>
 </body>
