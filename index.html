@@ -485,6 +485,18 @@ body.nm-intro-lock{overflow:hidden}
 @keyframes waPulse{0%{box-shadow:0 10px 30px rgba(0,0,0,.45),0 0 0 0 rgba(37,211,102,.55)}100%{box-shadow:0 10px 30px rgba(0,0,0,.45),0 0 0 18px rgba(37,211,102,0)}}
 @media(max-width:680px){#waFloat{right:16px;bottom:16px;width:54px;height:54px}}
 </style>
+
+<style id="proj-photos-css">
+.proj-card{min-height:260px;background:var(--bg-2)}
+.proj-card.tall{min-height:340px}
+.proj-card.wide{grid-column:1/-1;min-height:300px}
+.proj-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transform:scale(1.02);transition:transform .8s ease,filter .5s;filter:saturate(.9)}
+.proj-shade{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(11,19,32,0) 0%,rgba(11,19,32,.35) 50%,rgba(11,19,32,.9) 100%)}
+.proj-card:hover .proj-photo{transform:scale(1.08);filter:saturate(1.05)}
+.proj-card h3{text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.proj-info p{text-shadow:0 1px 8px rgba(0,0,0,.7)}
+@media(max-width:680px){.proj-card,.proj-card.tall,.proj-card.wide{min-height:220px}}
+</style>
 </head>
 <body class="nm-intro-lock">
 <div id="nm-intro" aria-label="Intro">
@@ -722,11 +734,13 @@ body.nm-intro-lock{overflow:hidden}
   <div class="wrap">
     <div class="sec-head reveal"><span class="sec-tag">Our Projects</span><h2>Our Mark on the Major Fields</h2><p>A strong track record of completed projects across Iraq's most prominent oilfields, backed by deep field experience.</p></div>
     <div class="proj-grid">
-      <div class="proj-card tall reveal"><div class="proj-bg"><svg viewBox="0 0 200 200" fill="none"><path d="M40 160V60l20-20v120" stroke="#ff7a18" stroke-width="2"/><path d="M40 60l40 20M40 80l40 20M40 100l40 20" stroke="#3ea0ff" stroke-width="1.5"/><circle cx="50" cy="40" r="8" fill="#ff7a18"/></svg></div><div class="proj-info"><span class="proj-cat">Water Treatment</span><h3>Zubair Field</h3><p>Integrated produced-water analysis, treatment, and corrosion-control program.</p></div></div>
-      <div class="proj-card reveal"><div class="proj-bg"><svg viewBox="0 0 200 100" fill="none"><path d="M20 80Q60 20 100 80T180 80" stroke="#3ea0ff" stroke-width="2"/></svg></div><div class="proj-info"><span class="proj-cat">Oil Analysis</span><h3>East Baghdad Field</h3><p>Crude-oil sample profiling and quality evaluation.</p></div></div>
-      <div class="proj-card reveal"><div class="proj-bg"><svg viewBox="0 0 200 100" fill="none"><rect x="40" y="30" width="30" height="50" stroke="#ff7a18" stroke-width="2"/><rect x="90" y="20" width="30" height="60" stroke="#3ea0ff" stroke-width="2"/><rect x="140" y="40" width="30" height="40" stroke="#ff7a18" stroke-width="2"/></svg></div><div class="proj-info"><span class="proj-cat">Lab Supervision</span><h3>Majnoon Field</h3><p>Comprehensive laboratory management and quality assurance.</p></div></div>
-      <div class="proj-card tall reveal"><div class="proj-bg"><svg viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="60" stroke="#3ea0ff" stroke-width="2"/><circle cx="100" cy="100" r="30" stroke="#ff7a18" stroke-width="2"/><path d="M100 40V10M100 160v30M40 100H10M160 100h30" stroke="#ff7a18" stroke-width="1.5"/></svg></div><div class="proj-info"><span class="proj-cat">Corrosion Control</span><h3>Badra Field</h3><p>Monitoring and corrosion-mitigation program for production lines and critical equipment.</p></div></div>
-    </div>
+      <div class="proj-card tall reveal"><img class="proj-photo" src="docs/projects/zubair.jpg" alt="Zubair Field" loading="lazy"><div class="proj-shade"></div><div class="proj-info"><span class="proj-cat">Water Treatment</span><h3>Zubair Field</h3><p>Integrated produced-water analysis, treatment, and corrosion-control program.</p></div></div>
+      <div class="proj-card  reveal"><img class="proj-photo" src="docs/projects/east-baghdad.jpg" alt="East Baghdad Field" loading="lazy"><div class="proj-shade"></div><div class="proj-info"><span class="proj-cat">Oil Analysis</span><h3>East Baghdad Field</h3><p>Crude-oil sample profiling and quality evaluation.</p></div></div>
+      <div class="proj-card  reveal"><img class="proj-photo" src="docs/projects/majnoon.jpg" alt="Majnoon Field" loading="lazy"><div class="proj-shade"></div><div class="proj-info"><span class="proj-cat">Lab Supervision</span><h3>Majnoon Field</h3><p>Comprehensive laboratory management and quality assurance.</p></div></div>
+      <div class="proj-card tall reveal"><img class="proj-photo" src="docs/projects/badra.jpg" alt="Badra Field" loading="lazy"><div class="proj-shade"></div><div class="proj-info"><span class="proj-cat">Corrosion Control</span><h3>Badra Field</h3><p>Monitoring and corrosion-mitigation program for production lines and critical equipment.</p></div></div>
+      <div class="proj-card wide reveal"><img class="proj-photo" src="docs/projects/block9.jpg" alt="Block 9 — Fayhaa Field" loading="lazy"><div class="proj-shade"></div><div class="proj-info"><span class="proj-cat">Laboratory &amp; Production Chemistry</span><h3>Block 9 — Fayhaa Field</h3><p>Oil, gas, water, amine and LPG analysis, chemical-treatment evaluation and corrosion monitoring at the Central Processing Facility.</p></div></div>
+      </div>
+  </div>
   </div>
 </section>
 
